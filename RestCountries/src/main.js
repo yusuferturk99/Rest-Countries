@@ -49,6 +49,12 @@ Vue.directive('b-toggle', VBToggle)
 import { BContainer } from 'bootstrap-vue'
 Vue.component('b-container', BContainer)
 
+import { BSpinner } from 'bootstrap-vue'
+Vue.component('b-spinner', BSpinner)
+
+import { SpinnerPlugin } from 'bootstrap-vue'
+Vue.use(SpinnerPlugin)
+
 Vue.config.productionTip = false
 
 new Vue({

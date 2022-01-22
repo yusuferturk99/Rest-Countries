@@ -16,12 +16,8 @@
       </div>
     </div>
 
-    <div class="lds-facebook" v-if="isLoading">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div v-else>
+    
+    <div>
       <b-collapse id="my-button">
       <b-form-input  style="width: 47%; float: left; margin-right: 25px" placeholder="name" v-model="searchText1"></b-form-input>
       </b-collapse>
@@ -36,7 +32,15 @@
       </b-collapse>
 
     </div>
-    <b-table striped hover :items="filteredData" :fields="fields" id="table" >
+
+    <div class="text-center justify-content-between mx-auto" v-if="isLoading" style="width: 15rem; height: 15rem;">
+      <b-spinner
+        v-for="variant in variants"
+        :variant="variant"
+        :key="variant"
+      ></b-spinner>
+    </div>
+    <b-table striped hover :items="filteredData" :fields="fields" v-else id="table" >
 
       <template #cell(flag)="data">
         <img :src="data.value" style="width: 70px" />
@@ -66,6 +70,7 @@ export default {
       searchText3: "",
       searchText4: "",
       inputbox: false,
+      variants: ['primary']
     };
   },
   computed: {
