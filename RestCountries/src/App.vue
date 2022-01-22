@@ -5,8 +5,8 @@
       <p style="font-size: large">Hello visitor, welcome to our website! Here, you can search for countries from all around the world. <br> So, what are you waiting for? Start searching! </p>
       <p>Note: You can search for countries with the parameters as well.</p>
     </div>
-      <div style="background: #eff3ef;"><br></div>
-    <div style="background: #eff3ef;">
+      <div style="background: #eff3ee;"><br></div>
+    <div style="background: #eff3ee;">
     <div>
       <b-form-input
           placeholder="Search in all parameters"
