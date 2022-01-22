@@ -153,7 +153,7 @@ export default {
 }
 #table {
   text-align: left;
-  background: #e0e6ea;
+  background: #e0e6eb;
 }
 #bigbar {
   margin-bottom: 15px;
