@@ -1,13 +1,19 @@
 <template>
   <div id="app">
+    <div style="font-family: Calibri; color: black">
+      <h1>List of Countries</h1>
+      <p style="font-size: large">Hello visitor, welcome to our website! Here, you can search for countries from all around the world. <br> So, what are you waiting for? Start searching! </p>
+      <p>Note: You can search for countries with the parameters as well.</p>
+    </div>
+    <div style="background: #e1e1de"></div>
     <div>
       <b-form-input
-          placeholder="Tüm değerlerde ara"
+          placeholder="Search in all parameters"
           id="bigbar"
           v-model="searchText"
       ></b-form-input>
       <div>
-        <b-dropdown id="options" text="Filtre">
+        <b-dropdown id="options" text="Filter">
           <b-dropdown-item v-b-toggle:my-button>name</b-dropdown-item>
           <b-dropdown-item v-b-toggle:my-button1>capital</b-dropdown-item>
           <b-dropdown-item v-b-toggle:my-button2>region</b-dropdown-item>
@@ -15,9 +21,8 @@
         </b-dropdown>
       </div>
     </div>
-
     
-    <div>
+    <div style="margin-bottom: 60px">
       <b-collapse id="my-button">
       <b-form-input  style="width: 47%; float: left; margin-right: 25px" placeholder="name" v-model="searchText1"></b-form-input>
       </b-collapse>
@@ -142,6 +147,7 @@ export default {
 }
 #table {
   text-align: left;
+  background: #d4dce3;
 }
 #bigbar {
   margin-bottom: 15px;
