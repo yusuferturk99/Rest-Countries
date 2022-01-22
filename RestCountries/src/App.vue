@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-    <div style="font-family: Calibri; color: black">
+    <div style="font-family: Calibri; color: black;">
       <h1>List of Countries</h1>
       <p style="font-size: large">Hello visitor, welcome to our website! Here, you can search for countries from all around the world. <br> So, what are you waiting for? Start searching! </p>
       <p>Note: You can search for countries with the parameters as well.</p>
     </div>
-    <div style="background: #e1e1de"></div>
+      <div style="background: #eff3ee;"><br></div>
+    <div style="background: #eff3ee;">
     <div>
       <b-form-input
           placeholder="Search in all parameters"
@@ -21,10 +22,10 @@
         </b-dropdown>
       </div>
     </div>
-    
-    <div style="margin-bottom: 60px">
+
+    <div style="margin-bottom: 60px;">
       <b-collapse id="my-button">
-      <b-form-input  style="width: 47%; float: left; margin-right: 25px" placeholder="name" v-model="searchText1"></b-form-input>
+      <b-form-input  style="width: 47%; float: left; margin-right: 25px;" placeholder="name" v-model="searchText1"></b-form-input>
       </b-collapse>
       <b-collapse id="my-button1">
       <b-form-input style="width: 24%; float: left; margin-right: 25px" placeholder="capital" v-model="searchText2"></b-form-input>
@@ -38,6 +39,9 @@
 
     </div>
 
+      <div style="background: white;"><br></div>
+    </div>
+
     <div class="text-center justify-content-between mx-auto" v-if="isLoading" style="width: 15rem; height: 15rem;">
       <b-spinner
         v-for="variant in variants"
@@ -45,12 +49,14 @@
         :key="variant"
       ></b-spinner>
     </div>
+
     <b-table striped hover :items="filteredData" :fields="fields" v-else id="table" >
 
       <template #cell(flag)="data">
         <img :src="data.value" style="width: 70px" />
       </template>
     </b-table>
+
   </div>
 </template>
 
@@ -147,7 +153,7 @@ export default {
 }
 #table {
   text-align: left;
-  background: #d4dce3;
+  background: #e0e6ea;
 }
 #bigbar {
   margin-bottom: 15px;
