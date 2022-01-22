@@ -42,6 +42,9 @@
       <div style="background: white;"><br></div>
     </div>
 
+      <div style="background: white;"><br></div>
+    </div>
+
     <div class="text-center justify-content-between mx-auto" v-if="isLoading" style="width: 15rem; height: 15rem;">
       <b-spinner
           v-for="variant in variants"
